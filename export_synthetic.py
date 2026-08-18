@@ -124,6 +124,10 @@ def main():
     b_path = os.path.join(args.output_dir, f"{dataset_name}_synthetic_b.csv")
     df.to_csv(b_path, index=False)
 
+if __name__ == "__main__":
+    main()
+
+
     if args.with_staging:
         for name, out_df, path in [("S1", s1_df, s1_path), ("S2", s2_df, s2_path), ("B", df, b_path)]:
             staged_path = path.replace(".csv", "_staged.csv")
