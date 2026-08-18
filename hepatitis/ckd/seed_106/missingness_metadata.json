@@ -1,0 +1,72 @@
+{
+  "ckd": {
+    "min_support": 0.1,
+    "min_any_confidence": 0.7,
+    "blocks": [
+      {
+        "itemset": [
+          "pot",
+          "sod"
+        ],
+        "any_confidence": 1.0,
+        "all_confidence": 0.989,
+        "cross_support": 0.989,
+        "conditionals": {
+          "pot": 0.9886,
+          "sod": 1.0
+        }
+      },
+      {
+        "itemset": [
+          "al",
+          "pc",
+          "rbc",
+          "sg",
+          "su"
+        ],
+        "any_confidence": 0.891,
+        "all_confidence": 0.27,
+        "cross_support": 0.303,
+        "conditionals": {
+          "al": 0.8913,
+          "pc": 0.6308,
+          "rbc": 0.2697,
+          "sg": 0.8723,
+          "su": 0.8367
+        }
+      },
+      {
+        "itemset": [
+          "hemo",
+          "pcv",
+          "rbcc",
+          "wbcc"
+        ],
+        "any_confidence": 0.865,
+        "all_confidence": 0.344,
+        "cross_support": 0.397,
+        "conditionals": {
+          "hemo": 0.8654,
+          "pcv": 0.6338,
+          "rbcc": 0.3435,
+          "wbcc": 0.4245
+        }
+      }
+    ],
+    "independent_columns": {
+      "age": 0.0225,
+      "bp": 0.03,
+      "pcc": 0.01,
+      "ba": 0.01,
+      "bgr": 0.11,
+      "bu": 0.0475,
+      "sc": 0.0425,
+      "htn": 0.005,
+      "dm": 0.005,
+      "cad": 0.005,
+      "appet": 0.0025,
+      "pe": 0.0025,
+      "ane": 0.0025
+    }
+  }
+}
