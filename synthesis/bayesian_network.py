@@ -36,6 +36,6 @@ def synthesize(X_train_filled, y_train, categorical_cols, shadow_cols=None, patt
 
 def extract_synth_pattern_labels(synth_features_with_pattern):
     output = synth_features_with_pattern.copy()
-    pattern_labels = output['missingness_patterns'].astype(str)
+    pattern_labels = output['missingness_pattern'].astype(str)
     output = output.drop(columns=['missingness_pattern'])
     return output, pattern_labels
