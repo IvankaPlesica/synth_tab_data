@@ -452,3 +452,7 @@ def main():
                 print(f"{branch}: mean risk across folds = {np.mean(so_risk[branch]):.4f} "
                       f"(std={np.std(so_risk[branch]):.4f})")
 
+
+if __name__ == "__main__":
+    main()
+
