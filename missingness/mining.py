@@ -1,6 +1,6 @@
 '''
 co-missingness block mining as described in RQ1
-uses Apriori frequent itemset mining over every row's missingness indicator vector, filtered by any-confidence
+uses Apriori frequent itemset mining over every row's missingness indicator vector, filtered by any_confidence
 '''
 
 from efficient_apriori import apriori
@@ -35,13 +35,13 @@ def detect_relevant_blocks(itemsets, min_any_confidence):
             'itemset': sorted(itemset),
             'itemset_frozenset': itemset,
             'count': count,
-            'any-confidence': round(any_confidence,3),
-            'all-confidence': round(all_confidence,3),
-            'cross-support': round(all_confidence/any_confidence,3),
+            'any_confidence': round(any_confidence,3),
+            'all_confidence': round(all_confidence,3),
+            'cross_support': round(all_confidence/any_confidence,3),
             'is_relevant_block': any_confidence >= min_any_confidence,
             })
 
-    results.sort(key=lambda r: -r['any-confidence'])
+    results.sort(key=lambda r: -r['any_confidence'])
 
     # added later, choosing subsets that are stronger than its relevant superset
 
@@ -94,16 +94,16 @@ class MissingnessModel:
             self.blocks.append(b)
             c_cols.update(b['itemset']) # return only those that share no columns
 
-        self.block_c = {}
+        self.block_conditionals = {}
         for b in self.blocks:
             key = tuple(b['itemset'])
             block_missing = M[b['itemset']].all(axis=1)
-            self.block_c[key] = {
+            self.block_conditionals[key] = {
                 col: block_missing[M[col]].mean() for col in b['itemset']
-                }
-        return self
+            }
+        return self 
 
     def summary(self):
         print(f"Relevant blocks ({len(self.blocks)}):")
         for b in self.blocks:
-            print(f"  {b['itemset']}  any-confidence={b['any-confidence']:.3f}")
+            print(f"  {b['itemset']}  any_confidence={b['any_confidence']:.3f}")
