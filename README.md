@@ -80,6 +80,8 @@ subgroups/
     outlier_rule.py       # frozen OutlierRule: apply/explain
     privacy.py             # anonymeter attack-row helpers
 staging/                # optional disease staging (eGFR/CKD stage, ALBI score)
+    albi.py
+    egfr.py
 export_synthetic.py     # entry point: generate synthetic datasets
 evaluate.py              # entry point: cross-validated R/S1/S2 evaluation
 ```
