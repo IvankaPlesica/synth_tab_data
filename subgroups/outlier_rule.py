@@ -36,4 +36,4 @@ class OutlierRule:
         return distances > cutoffs
 
     def explain(self):
-        return export_text(self.outlier_tree, feature_names=self.encoder.feature_names_,)
+        return export_text(self.outlier_tree, feature_names=list(self.outlier_tree.feature_names_in_),)
