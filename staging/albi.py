@@ -28,7 +28,7 @@ def add_albi_columns(df, bilirubin_col='bilirubin', albumin_col='albumin', age_c
 
     albi = np.where (invalid,
                      np.nan,
-                     np.log10(bilirubin_umoll) * ALBI_COEF_ALBUMIN + albumin_gl * ALBI_COEF_ALBUMIN,
+                     np.log10(bilirubin_umoll) * ALBI_COEFF_BILIRUBIN + albumin_gl * ALBI_COEF_ALBUMIN,
                      )
     
     df['albi_score'] = np.round(albi, 1)
