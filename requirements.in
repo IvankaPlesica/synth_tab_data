@@ -1,0 +1,10 @@
+anonymeter
+efficient_apriori
+joblib
+numpy
+pandas
+scikit-learn
+statsmodels
+numba<0.63
+llvmlite<0.46
+./dist/semsynth-0.1.0-py3-none-any.whl[pybnesian]
