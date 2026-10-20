@@ -1,3 +1,9 @@
+## Poster
+
+[![Project poster](docs/poster.png)](docs/poster.pdf)
+
+*Click the image to open the full PDF.*
+
 # Synthetic Data Pipeline
 
 This project generates synthetic datasets for **CKD** and **hepatitis**.
