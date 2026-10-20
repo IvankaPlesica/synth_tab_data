@@ -4,6 +4,10 @@
 
 *Click the image to open the full PDF.*
 
+
+## Full Paper
+[Click here to open the full PDF](docs/Full_Paper_StructuredMissingness.pdf)
+
 # Synthetic Data Pipeline
 
 This project generates synthetic datasets for **CKD** and **hepatitis**.
