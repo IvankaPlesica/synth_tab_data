@@ -1,6 +1,6 @@
 ## Poster
 
-[![Project poster](docs/poster.png)](docs/poster.pdf)
+[![Project poster](docs/BNAIC_conference_poster.png)](docs/BNAIC_conference_poster.pdf)
 
 *Click the image to open the full PDF.*
 
